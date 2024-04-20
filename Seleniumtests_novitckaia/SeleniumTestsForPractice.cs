@@ -1,10 +1,7 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Support.UI;
-using SeleniumExtras.WaitHelpers;
 using FluentAssertions;
-using NUnit.Framework.Constraints;
 using System.Drawing;
 
 namespace Seleniumtests_novitckaia;
@@ -97,6 +94,29 @@ public class SeleniumTestsForPractice
         buttonSave.Click(); // нажать на "Сохранить"
      
         driver.FindElement(By.XPath("//*[contains(text(), 'For_autotest')]")); // проверка, что созданная папка есть в списке
+    }
+    
+    [Test]
+    public void SearchEmployee() // тест на поиск сотрудника и переход на страницу его профиля
+    {
+        var searchBar = driver.FindElements(By.CssSelector("[data-tid='SearchBar']")).First(element => element.Displayed);
+        searchBar.Click(); // нажать по панель поиска
+     
+        var inputName = driver.FindElement(By.XPath("//*[@id='root']/div/header/div/div[2]/div/span/label/span[2]/input"));
+        inputName.SendKeys("Тюльпанова Анна Сергеевна"); // ввод имени сотрудника
+     
+        // без явного ожидания иногда тест падает из-за того, что не успевает кликнуть по всплывающему полю
+        Thread.Sleep(2000);
+        
+        var chooseEmployee = driver.FindElement(By.CssSelector("[data-tid='Item']"));
+        chooseEmployee.Click(); // нажать на всплывающее поле с именем сотрудника
+     
+        // проверка, что находимся на странице профиля сотруднка
+        driver.Url.Should().Be("https://staff-testing.testkontur.ru/profile/0ec5f832-f306-467f-a0d5-1d142b79fad9");
+        
+        // проверка, что имя сотрудника совпадает с тем, что ввели
+        var adressValue = driver.FindElement(By.CssSelector("[data-tid='EmployeeName']")).Text;
+        adressValue.Should().Be("Тюльпанова Анна Сергеевна");
     }
     
     public void Autorization() // метод авторизации
