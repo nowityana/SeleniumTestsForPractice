@@ -76,6 +76,29 @@ public class SeleniumTestsForPractice
         adressValue.Should().Be("Дворцовая пл., 2, Санкт-Петербург");
     }
     
+    [Test]
+    public void MakeFolder() // тест на создание папки
+    {
+        // без явного ожидания иногда тест падает из-за того, что не успевает перейти на страницу файлов
+        Thread.Sleep(1000);
+        
+        driver.Navigate().GoToUrl("https://staff-testing.testkontur.ru/files"); // переход на страницу "Файлы"
+     
+        var buttonMake = driver.FindElement(By.CssSelector("[class='react-ui-1mhlayz']"));
+        buttonMake.Click(); // нажать на "Добавить"
+     
+        var folder = driver.FindElement(By.CssSelector("[class='sc-iGkqmO ckwDLe react-ui-yqskr3']"));
+        folder.Click(); // нажать на "Папку"
+     
+        var folderInputName = driver.FindElement(By.CssSelector("[data-tid='Input']"));
+        folderInputName.SendKeys("For_autotests"); // ввод названия папки
+     
+        var buttonSave = driver.FindElement(By.CssSelector("[data-tid='SaveButton']"));
+        buttonSave.Click(); // нажать на "Сохранить"
+     
+        driver.FindElement(By.XPath("//*[contains(text(), 'For_autotest')]")); // проверка, что созданная папка есть в списке
+    }
+    
     public void Autorization() // метод авторизации
     {
         // перейти по урлу https://staff-testing.testkontur.ru
