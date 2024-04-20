@@ -1,7 +1,10 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
 using FluentAssertions;
+using NUnit.Framework.Constraints;
 using System.Drawing;
 
 namespace Seleniumtests_novitckaia;
@@ -45,6 +48,32 @@ public class SeleniumTestsForPractice
         // проверяем что сообщества есть на странице
         var communityTitle = driver.FindElement(By.CssSelector("[data-tid='SidebarMenuButton']")); 
         driver.Url.Should().Be("https://staff-testing.testkontur.ru/communities"); // проверяем урл
+    }
+    
+    [Test]
+    public void EditProfileAdress() // тест на редактирование адреса в профиле 
+    {
+        var buttonActions = driver.FindElement(By.CssSelector("[data-tid='Actions']")); 
+        buttonActions.Click(); // нажать на профиль
+        
+        var buttonEdit = driver.FindElement(By.CssSelector("[data-tid='ProfileEdit']"));
+        buttonEdit.Click(); // нажать на "Редактировать"
+        
+        var adressEdit = driver.FindElement(By.CssSelector("textarea.react-ui-r3t2bi"));
+        adressEdit.SendKeys("Дворцовая пл., 2, Санкт-Петербург"); // ввод адреса
+        
+        var buttonSave = driver.FindElement(By.CssSelector("button.sc-juXuNZ.kVHSha"));   
+        buttonSave.Click(); // нажать на "Сохранить"
+        
+        // без явного ожидания иногда тест падает из-за того, что не успевает перейти на страницу профиля
+        Thread.Sleep(1000);
+        
+        // проверка, что после сохранения находимся на странице профиля пользователя
+        driver.Url.Should().Be("https://staff-testing.testkontur.ru/profile/b060adf8-1282-49c4-8ef6-56afee9a4df8");
+        
+        // проверка, что поле "Адрес" содержит то, что ввели
+        var adressValue = driver.FindElement(By.CssSelector("div.sc-exqIPC.leuDbu")).Text;
+        adressValue.Should().Be("Дворцовая пл., 2, Санкт-Петербург");
     }
     
     public void Autorization() // метод авторизации
