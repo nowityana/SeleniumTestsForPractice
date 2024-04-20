@@ -1,4 +1,19 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=30f958cc_002D6c67_002D4c18_002D8247_002Df0a6822f6205/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Solution /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3f11b84a_002Ded98_002D405f_002D8157_002D3c8abf79a5dc/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="NavigationTest #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::27C138C5-345F-4581-8DA0-F32D670FA823::net6.0::Seleniumtests_novitckaia.SeleniumTestsForPractice.AutorizationTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::27C138C5-345F-4581-8DA0-F32D670FA823::net6.0::Seleniumtests_novitckaia.SeleniumTestsForPractice.SideBarMenuTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::27C138C5-345F-4581-8DA0-F32D670FA823::net6.0::Seleniumtests_novitckaia.SeleniumTestsForPractice.EditProfileAdress&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d6b8760b_002D002a_002D4dc2_002D85b1_002D0e2f1daf17db/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Solution /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f80271c3_002Dc11b_002D49a4_002Dba70_002D3d2f325ccc76/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="NavigationTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::27C138C5-345F-4581-8DA0-F32D670FA823::net6.0::Seleniumtests_novitckaia.SeleniumTestsForPractice.NavigationTest&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
