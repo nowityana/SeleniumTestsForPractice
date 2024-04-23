@@ -7,6 +7,8 @@
     &lt;TestId&gt;NUnit3x::27C138C5-345F-4581-8DA0-F32D670FA823::net6.0::Seleniumtests_novitckaia.SeleniumTestsForPractice.AutorizationTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::27C138C5-345F-4581-8DA0-F32D670FA823::net6.0::Seleniumtests_novitckaia.SeleniumTestsForPractice.SideBarMenuTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::27C138C5-345F-4581-8DA0-F32D670FA823::net6.0::Seleniumtests_novitckaia.SeleniumTestsForPractice.EditProfileAdress&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::27C138C5-345F-4581-8DA0-F32D670FA823::net6.0::Seleniumtests_novitckaia.SeleniumTestsForPractice.MakeFolder&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::27C138C5-345F-4581-8DA0-F32D670FA823::net6.0::Seleniumtests_novitckaia.SeleniumTestsForPractice.SearchEmployee&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d6b8760b_002D002a_002D4dc2_002D85b1_002D0e2f1daf17db/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
